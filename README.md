@@ -6,6 +6,7 @@
         <button onclick="sendMessage()">Send</button>
     </div>
     <button onclick="showPage(1)">Go to Page 1</button>
+    <button onclick="showAnnouncements()">Announcements</button>
 </div>
 
 <script>
@@ -17,6 +18,11 @@
             document.getElementById('page1').style.display = 'none';
             document.getElementById('page2').style.display = 'block';
         }
+    }
+
+    function showAnnouncements() {
+        // Add code here to show announcements or navigate to an announcements page.
+        // You can define the behavior you want for the "Announcements" button.
     }
 
     function sendMessage() {
