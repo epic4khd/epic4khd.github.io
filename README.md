@@ -15,7 +15,13 @@
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
-            border-radius: 10px; /* Rounded corners added */
+            border-radius: 10px;
+        }
+        /* Change background color for both pages */
+        #page1, #page2 {
+            background-color: rgb(98, 19, 135);
+            color: white; /* Set text color to contrast with the background */
+            padding: 20px;
         }
     </style>
 </head>
