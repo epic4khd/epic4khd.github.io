@@ -20,7 +20,7 @@
 <body>
     <div id="page1">
         <h1>Announcements</h1> <!-- Changed text here -->
-        <button onclick="showPage(2)">Go To The Chatroom</button>
+        <button onclick="showPage(2)">Info</button>
     </div>
 
     <div id="page2" style="display: none;">
