@@ -28,7 +28,7 @@
 <body>
     <div id="page1">
         <h1>Announcements</h1>
-        <button onclick="showPage(2)">Go To The Chatroom</button>
+        <button onclick="showPage(2)">Go To Info</button>
     </div>
 
     <div id="page2" style="display: none;">
