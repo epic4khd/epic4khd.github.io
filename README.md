@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +15,14 @@
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
+            border-radius: 10px; /* Rounded corners added */
         }
     </style>
 </head>
 <body>
     <div id="page1">
-        <h1>Announcements</h1> <!-- Changed text here -->
-        <button onclick="showPage(2)">Info</button>
+        <h1>Announcements</h1>
+        <button onclick="showPage(2)">Go To The Chatroom</button>
     </div>
 
     <div id="page2" style="display: none;">
