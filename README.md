@@ -29,7 +29,7 @@
     <div id="page1">
         <h1>Announcements</h1>
         <!-- Added image with rounded corners -->
-        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Epic%21_Logo.png" alt="Image" style="border-radius: 10px; max-width: 100%; height: auto;">
+        <img src="https://o.remove.bg/downloads/fd9914c7-05cf-48da-808f-694af04dd804/Epic__Logo-removebg-preview.png" alt="Image" style="border-radius: 10px; max-width: 100%; height: auto;">
         <button onclick="showPage(2)">Go To The Chatroom</button>
     </div>
 
