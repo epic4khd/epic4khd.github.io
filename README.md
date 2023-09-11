@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +28,9 @@
 <body>
     <div id="page1">
         <h1>Announcements</h1>
-        <button onclick="showPage(2)">Go To Info</button>
+        <!-- Added image with rounded corners -->
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Epic%21_Logo.png" alt="Image" style="border-radius: 10px; max-width: 100%; height: auto;">
+        <button onclick="showPage(2)">Go To The Chatroom</button>
     </div>
 
     <div id="page2" style="display: none;">
