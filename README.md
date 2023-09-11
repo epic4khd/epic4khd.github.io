@@ -15,27 +15,24 @@
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
-            border-radius: 10px;
-        }
-        /* Change background color for both pages */
-        #page1, #page2 {
-            background-color: rgb(98, 19, 135);
-            color: white; /* Set text color to contrast with the background */
-            padding: 20px;
         }
     </style>
 </head>
 <body>
     <div id="page1">
-        <h1>Announcements</h1>
-        <!-- Added image with rounded corners -->
-        <img src="https://o.remove.bg/downloads/fd9914c7-05cf-48da-808f-694af04dd804/Epic__Logo-removebg-preview.png" alt="Image" style="border-radius: 10px; max-width: 100%; height: auto;">
-        <button onclick="showPage(2)">Go To The Chatroom</button>
+        <h1>Welcome to Page 1</h1>
+        <button onclick="showPage(2)">Go To The Main Info Page</button>
     </div>
 
     <div id="page2" style="display: none;">
-        <h1>Welcome to Page 2</h1>
+        <h1>Welcome to the Chatroom</h1>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
         <button onclick="showPage(1)">Go to Page 1</button>
+        <button onclick="showAnnouncements()">Announcements</button>
     </div>
 
     <script>
@@ -48,6 +45,23 @@
                 document.getElementById('page2').style.display = 'block';
             }
         }
+
+        function showAnnouncements() {
+            // Add code here to show announcements or navigate to an announcements page.
+            // You can define the behavior you want for the "Announcements" button.
+        }
+
+        function sendMessage() {
+            var message = document.getElementById('message-input').value;
+            if (message.trim() !== '') {
+                var chatMessages = document.getElementById('chat-messages');
+                var newMessage = document.createElement('div');
+                newMessage.textContent = message;
+                chatMessages.appendChild(newMessage);
+                document.getElementById('message-input').value = '';
+            }
+        }
     </script>
 </body>
 </html>
+
