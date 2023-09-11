@@ -20,7 +20,7 @@
 <body>
     <div id="page1">
         <h1>Welcome to Page 1</h1>
-        <button onclick="showPage(2)">Go to Page 2</button>
+        <button onclick="showPage(2)">Go to Chatroom</button>
     </div>
 
     <div id="page2" style="display: none;">
