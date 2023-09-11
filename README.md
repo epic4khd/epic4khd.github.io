@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Website</title>
     <style>
         body {
-            background-color: blue;
-            color: black;
-            text-align: center;
-        }
-        .button {
             background-color: white;
-            color: black;
-            padding: 10px 20px;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px;
+            font-size: 24px;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
             cursor: pointer;
-            border-radius: 10px; /* Adding rounded corners */
         }
     </style>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <a class="button" href="https://classroom.google.com">Click</a>
-    <br> <!-- Line break to create space -->
-    <a class="button" href
+    <div id="page1">
+        <h1>Welcome to Page 1</h1>
+        <button onclick="showPage(2)">Go to Page 2</button>
+    </div>
+
+    <div id="page2" style="display: none;">
+        <h1>Welcome to Page 2</h1>
+        <button onclick="showPage(1)">Go to Page 1</button>
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            if (pageNumber === 1) {
+                document.getElementById('page1').style.display = 'block';
+                document.getElementById('page2').style.display = 'none';
+            } else if (pageNumber === 2) {
+                document.getElementById('page1').style.display = 'none';
+                document.getElementById('page2').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
