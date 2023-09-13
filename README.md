@@ -14,6 +14,7 @@
             padding: 10px 20px;
             font-size: 18px;
             cursor: pointer;
+            border-radius: 10px; /* Rounded corners */
         }
     </style>
 </head>
