@@ -4,7 +4,7 @@
     <title>HTML Code Runner</title>
 </head>
 <body>
-    <h1>HTML Code Runner</h1>
+    <h1>Simps</h1>
     
     <p>Paste your HTML code below:</p>
     
@@ -13,6 +13,7 @@
     <br>
     
     <button onclick="runCode()">Run Code</button>
+    <button onclick="saveOutput()">Save Output</button>
     
     <hr>
     
@@ -32,6 +33,18 @@
             outputFrame.contentDocument.open();
             outputFrame.contentDocument.write(htmlCode);
             outputFrame.contentDocument.close();
+        }
+
+        function saveOutput() {
+            const htmlCode = document.getElementById("htmlCode").value;
+            const blob = new Blob([htmlCode], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'output.html';
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
     </script>
 </body>
