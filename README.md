@@ -1,43 +1,37 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Website</title>
-    <style>
-        body {
-            background-color: white;
-            text-align: center;
-            font-size: 24px;
-            padding: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 10px; /* Rounded corners */
-        }
-    </style>
+    <title>HTML Code Runner</title>
 </head>
 <body>
-    <div id="page1">
-        <h1>Welcome to Page 1</h1>
-        <button onclick="showPage(2)">Go To The Chatroom</button>
-    </div>
-
-    <div id="page2" style="display: none;">
-        <h1>Welcome to Page 2</h1>
-        <button onclick="showPage(1)">Go to Page 1</button>
-    </div>
+    <h1>HTML Code Runner</h1>
+    
+    <p>Paste your HTML code below:</p>
+    
+    <textarea id="htmlCode" rows="10" cols="50"></textarea>
+    
+    <br>
+    
+    <button onclick="runCode()">Run Code</button>
+    
+    <hr>
+    
+    <h2>Output:</h2>
+    
+    <iframe id="output" width="100%" height="400"></iframe>
 
     <script>
-        function showPage(pageNumber) {
-            if (pageNumber === 1) {
-                document.getElementById('page1').style.display = 'block';
-                document.getElementById('page2').style.display = 'none';
-            } else if (pageNumber === 2) {
-                document.getElementById('page1').style.display = 'none';
-                document.getElementById('page2').style.display = 'block';
-            }
+        function runCode() {
+            const htmlCode = document.getElementById("htmlCode").value;
+            const outputFrame = document.getElementById("output");
+            
+            // Clear the existing content in the output frame
+            outputFrame.contentDocument.body.innerHTML = '';
+            
+            // Write the user's HTML code to the output frame
+            outputFrame.contentDocument.open();
+            outputFrame.contentDocument.write(htmlCode);
+            outputFrame.contentDocument.close();
         }
     </script>
 </body>
